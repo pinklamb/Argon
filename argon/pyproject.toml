@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "argon-local-engine"
+version = "0.1.0"
+description = "Local JavaScript, TypeScript, and Python AST counter prototype"
+requires-python = ">=3.12"
+dependencies = [
+    "ast-grep-py>=0.45,<0.46",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "radon>=6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
